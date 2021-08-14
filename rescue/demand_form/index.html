@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rescue</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAfXgMOFXar1G0GDvMwrJtHT1SoCQkAL1c",
+    authDomain: "rescue-b235b.firebaseapp.com",
+    projectId: "rescue-b235b",
+    storageBucket: "rescue-b235b.appspot.com",
+    messagingSenderId: "995003798755",
+    appId: "1:995003798755:web:8da3321abb521de23ca1d6",
+    measurementId: "G-RRVB03VE5J"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db=firebase.firestore();
+  db.settings({timestampsInSnapshots: true});
+</script>
+
+
+<div class="diagonalimg">
+
+    <h1 class="adiya badiya">
+        Kindly Fill in your details
+    </h1>
+    <div class="demandForm">
+    <form id="reg_form">
+      
+        <label for="01">Full Name</label>
+        <br>
+        <input type="text"class="finput" id="01" name="name" autocomplete="off" required>
+        <br>
+        <br>
+        <label for="01">E-mail address</label>
+        <br>
+        <input type="email"class="finput" id="01" name="email" autocomplete="off">
+        <br>
+        <br>
+        <label for="01">Phone Number</label>
+        <br>
+        <input type="tel" class="finput"id="01" name="pno" required minlength="10" autocomplete="off" maxlength="10" class="finput" size="10">
+        <br>
+        <br>
+        <label for="01">State</label>
+        <br>
+        <input type="text"class="finput" id="01" list="state" name="state" autocomplete="off" required>
+        <datalist id="state">
+                    <option value="Andhra Pradesh (AP)"></option>
+                    <option value="Arunachal Pradesh (AR)"></option>
+                    <option value="Assam (AS)"></option>
+                    <option value="Bihar (BR)"></option>
+                   <option value=" Chhattisgarh (CG)"></option>
+                   <option value=" Goa (GA)"></option>
+                   <option value=" Gujarat (GJ)"></option>
+                   <option value=" Haryana (HR)"></option>
+                    <option value="Himachal Pradesh (HP)"></option>
+                   <option value=" Jammu and Kashmir (JK)"></option>
+                   <option value=" Jharkhand (JH)"></option>
+                    <option value="Karnataka (KA)"></option>
+                   <option value=" Kerala (KL)"></option>
+                   <option value=" Madhya Pradesh (MP)"></option>
+                  <option value="  Maharashtra (MH)"></option>
+                  <option value="  Manipur (MN)"></option>
+                 <option value="   Meghalaya (ML)"></option>
+                  <option value="  Mizoram (MZ)"></option>
+                  <option value="  Nagaland (NL)"></option>
+                 <option value="   Odisha(OR)"></option>
+                 <option value="   Punjab (PB)"></option>
+                  <option value="  Rajasthan (RJ)"></option>
+                  <option value="  Sikkim (SK)"></option>
+                  <option value="  Tamil Nadu (TN)"></option>
+                  <option value="  Telangana (TS)"></option>
+                  <option value="  Tripura (TR)"></option>
+                  <option value="  Uttar Pradesh (UP)"></option>
+                    <option value="Uttarakhand (UK)"></option>
+                   <option value=" West Bengal (WB)"></option>
+                   <option value=" Andaman and Nicobar Islands(AN)"></option>
+                   <option value=" Chandigarh (CH)"></option>
+                   <option value=" Dadra and Nagar Haveli (DN)"></option>
+                   <option value=" Daman and Diu (DD)"></option>
+                   <option value=" National Capital Territory of Delhi (DL)"></option>
+                   <option value=" Lakshadweep (LD)"></option>
+                   <option value=" Pondicherry (PY)"></option>
+                   <option value=" Ladakh"></option>
+            
+        </datalist>
+        <br>
+        <br>
+        <label for="01">City</label>
+        <br>
+        <input type="text"class="finput" id="01" name="city" autocomplete="off" required>
+        <br>
+        <br>
+        <label for="01">pincode</label>
+        <br>
+        <input type="text"class="finput" id="01" name="pincode" autocomplete="off" required>
+        <br>
+        <br>
+        <fieldset style="width: 1000px; border: 1px solid #04009a; border-radius: 20px;">
+            <legend style="font-family: 'Montserrat', sans-serif;font-size: 50px; color:#04009a; font-weight: 1000;">Requirements</legend>
+            <br>
+            <div class="content">
+            <label for="01" class="requirement">Requirement</label>
+            <br>
+            <input class="finput" list="require" name="req" autocomplete="off">
+            <datalist id="require">
+                <option value="Oxygen tanks"></option>
+                <option value="plasma donors"></option>
+                <option value="Food and water"></option>
+                <option value="shelter"></option>
+            </datalist>
+             <br>
+            </div>
+            <div class="container"></div>
+            <a class="dltBtn">delete</a>
+        <div class="addbtn">
+            <p>+</p>
+        </div>
+
+        </fieldset>
+        <input class="sbtbtn" type="submit" value="Submit">
+    </form>
+</div>
+</div>
+<div class="results"></div>
+    <script src="app.js"></script>
+</body>
+</html>

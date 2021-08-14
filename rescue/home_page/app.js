@@ -1,0 +1,12 @@
+$(".box").mouseenter(function(){
+    $(".circle").addClass("abcd");
+});
+$(".box").mouseleave(function(){
+    $(".circle").removeClass("abcd");
+});
+$(".boxx").mouseenter(function(){
+    $(".circlee").addClass("abcd");
+});
+$(".boxx").mouseleave(function(){
+    $(".circlee").removeClass("abcd");
+});

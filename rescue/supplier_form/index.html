@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rescue</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+                    <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAfXgMOFXar1G0GDvMwrJtHT1SoCQkAL1c",
+            authDomain: "rescue-b235b.firebaseapp.com",
+            projectId: "rescue-b235b",
+            storageBucket: "rescue-b235b.appspot.com",
+            messagingSenderId: "995003798755",
+            appId: "1:995003798755:web:8da3321abb521de23ca1d6",
+            measurementId: "G-RRVB03VE5J"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db=firebase.firestore();
+        db.settings({timestampsInSnapshots: true});
+        </script>
+
+
+
+
+
+
+<div class="diagonalimg">
+
+
+    <h1 class="adiya badiya">
+        Kindly Fill in your details
+    </h1>
+    <div class="demandForm">
+    <form id="reg_form">
+        <label for="01">Full Name</label>
+        <br>
+        <input type="text"class="finput" id="01" name="name" required>
+        <br>
+        <br>
+        <label for="01">E-mail address</label>
+        <br>
+        <input type="email"class="finput" id="01" name="email">
+        <br>
+        <br>
+        <label for="01">Phone Number</label>
+        <br>
+        <input type="tel" class="finput"id="01" name="pno" required minlength="10" maxlength="10" class="finput" size="10">
+        <br>
+        <br>
+        <label for="01">State</label>
+        <br>
+        <input type="text"class="finput" id="01" name="state" required>
+        <br>
+        <br>
+        <label for="01">City</label>
+        <br>
+        <input type="text"class="finput" id="01" name="city" required>
+        <br>
+        <br>
+        <label for="01">pincode</label>
+        <br>
+        <input type="text"class="finput" id="01" name="pincode" required>
+        <br>
+        <br>
+        <fieldset style="width: 1000px; border: 1px solid #04009a; border-radius: 20px;">
+            <legend style="font-family: 'Montserrat', sans-serif;font-size: 50px; color:#04009a; font-weight: 1000;">Supplies Offered</legend>
+            <br>
+            <table style="width: 1050px;" class="table">
+                <tr>
+                <th  style="font-size: 40px; color: #04009a; ">Services/Commodity</th>
+                <th  style="font-size: 40px; color: #04009a;">Quantity</th>
+                </tr>
+                <tr class="tblrow">
+                    <td style="text-align: center; border: 5px solid #04009a; "><input type="text" name="com" class="spl_in">  </td>
+                    <td style="text-align: center; border: 5px solid #04009a;"><input type="text" name="quan" class="spl_in_stock"> </td>
+                </tr>
+            </table>
+            <a class="dltBtn">delete</a>
+            <div class="addbtn">
+                <p>+</p>
+            </div>
+        </fieldset>
+        <input class="sbtbtn" type="submit" value="Submit">
+    </form>
+    </div>
+   </div>
+    <script src="app.js"></script>
+  </body>
+  </html>
